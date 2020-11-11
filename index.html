@@ -3,59 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Silicon Store</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Noto+Sans+JP:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
     <meta name="description" content="---" />
     <meta name="keywords" content="---" />
   </head>
   <body>
-    <div class="intro">
-     <div class="container">
-         
-        <div class="nav__container">
-          <h1>silicon store</h1>
-
-          <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Account</a></li>
-              <li><a href="#">Account</a></li>
-              <li><a href="#">Account</a></li>
-            </ul>
-          </nav>
-        </div> 
-    </div>
-    <div class="slider__container">
-
-        <button class="prev" onclick="prevSlide()"></button>
-        <div class="slider__track">
-            <div class="slider__content">
-                <a href="#"><img src="assets/images/slider/1.jpg" alt=""></a>
-            </div>
-            <div class="slider__content">
-                <a href=""><img src="assets/images/slider/2.jpg" alt=""></a>
-            </div>
-            <div class="slider__content">
-                <a href=""><img src="assets/images/slider/3.jpg" alt=""></a>
-            </div>
-            <div class="slider__content">
-                <a href=""><img src="assets/images/slider/4.jpg" alt=""></a>
-            </div>
-            <div class="slider__content"><img src="assets/images/slider/5.jpg" alt=""></div>
+    <!-- nav start -->
+    <div class="nav__container">
+      <nav>
+        <span class="nav-icon">
+          <i class="fas fa-bars"></i>
+        </span>
+        <h1>Silicon store</h1>
+        <div class="cart-btn">
+          <span class="nav-icon">
+            <i class="fas fa-cart-plus"></i>
+          </span>
+          <div class="cart-items">0</div>
         </div>
-        <button class="next" onclick="nextSlide()"></button>
+        <!-- <h1>silicon store</h1> -->
+        <!-- <ul>
+            <li><a href="#">Home </a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Account</a></li>
+          </ul> -->
+      </nav>
     </div>
+    <!-- end of nav -->
+
+    <!-- slider start -->
+    <div class="slider__container">
+      <button class="prev" onclick="prevSlide()"></button>
+      <div class="slider__track">
+        <div class="slider__content">
+          <a href="#"><img src="assets/images/slider/1.jpg" alt="" /></a>
+        </div>
+        <div class="slider__content">
+          <a href=""><img src="assets/images/slider/2.jpg" alt="" /></a>
+        </div>
+        <div class="slider__content">
+          <a href=""><img src="assets/images/slider/3.jpg" alt="" /></a>
+        </div>
+        <div class="slider__content">
+          <a href=""><img src="assets/images/slider/4.jpg" alt="" /></a>
+        </div>
+        <div class="slider__content">
+          <img src="assets/images/slider/5.jpg" alt="" />
+        </div>
       </div>
-
+      <button class="next" onclick="nextSlide()"></button>
     </div>
-
+    <!-- end of slider  -->
+    <!-- products -->
+    <div class="container">
+      <h2>Our products</h2>
+    </div>
+    <!-- products center -->
+    <div class="product-center">
+      <!-- single product -->
+      <article class="product">
+        <div class="img-container">
+          <img src="assets/images/products/11-pro-max.jpg" alt="product" class="product-img" />
+          <button class="bag-btn" data-id="1">
+            <i class="fas fa-shopping-cart"></i>
+            add to bag
+          </button>
+        </div>
+        <h3>Apple iPhone 11 Pro Max</h3>
+        <h4>999$</h4>
+      </article>
+      <!-- end of single product -->
+    </div>
+    <!-- end of products center -->
+    <!-- end of products -->
     <script src="js/script.js"></script>
   </body>
 </html>

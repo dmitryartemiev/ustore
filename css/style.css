@@ -24,34 +24,62 @@ h6 {
 
 h1 {
   margin-left: 20px;
-  font-size: 15px;
+  font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
+  text-align: center;
+  
 }
 
-/* Container */
+/* ---Container--- */
 .container {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1170px;
   margin: 0 auto;
   position: relative;
 }
 
-/* Intro */
-.intro {
-  /* height: 50vh; */
-}
+/* ---Navigation--- */
 
-/* Navigation */
+.nav-icon{
+  padding: 10px 20px;
+  font-size: 2rem;
+  cursor: pointer;
+}
 .nav__container {
-  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170px;
   align-items: center;
 }
 nav {
-  flex: 1;
-  text-align: right;
+  position: sticky;
+display: flex;
+align-content: center;
+justify-content: space-between;
+align-items: center;
+height: 60px;
+background-color: white;
 }
-nav ul {
+.cart-btn{
+  position: relative;
+  
+}
+
+.cart-items{
+  position: absolute;
+  top: -2px;
+  right: 8px;
+  font-size: 1rem;
+  background-color: rgba(180, 6, 6, 0.856);
+  padding: 0px 7px; 
+  border-radius: 6px;
+  color: white;
+
+}
+
+
+/*nav ul {
   display: inline-block;
   list-style: none;
 }
@@ -62,7 +90,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #333;
-}
+} */
 
 /* ---Slider--- */
 
@@ -85,13 +113,14 @@ nav ul li a {
   height: 100%;
   min-width: 100%;
 }
-/* кнопки слайдера */
+/* Slider button */
 .slider__content img {
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
-.prev, .next{
+.prev,
+.next {
   position: absolute;
   height: calc(100% - 4px);
   z-index: 100;
@@ -99,17 +128,17 @@ nav ul li a {
   border: none;
   outline: none;
   cursor: pointer;
-  transition: .2s all ease;
+  transition: 0.2s all ease;
 }
-.next{
+.next {
   right: 0;
-  top:0;
+  top: 0;
   transform: rotate(180deg);
 }
 .prev::after,
 .next::after {
   margin: 10px;
-  padding: 2px; 
+  padding: 2px;
   display: inline-block;
   content: "";
   position: relative;
@@ -121,9 +150,38 @@ nav ul li a {
   border-bottom: none;
   transform: rotate(-45deg);
 }
-.next:hover,  .next:active {
+.next:hover,
+.next:active {
   transform: scale(1.5) rotate(180deg);
 }
-.prev:hover,  .prev:active {
-  transform: scale(1.5) ;
+.prev:hover,
+.prev:active {
+  transform: scale(1.5);
+}
+/* End of slider button */
+/* ---End of slider--- */
+
+/* ---Products--- */
+
+.products {
+  padding: 4rem 0;
+}
+h2{
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+}
+.products-center{
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+.img-container{
+  position: relative;
+  overflow: hidden;
 }

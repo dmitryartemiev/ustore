@@ -37,15 +37,14 @@ function prevSlide() {
 }
 
 let timer = setInterval(function () {
+  nextSlide();
+}, 5000);
+
+sliderContainer.onmouseout = function () {
+  timer = setInterval(function () {
     nextSlide();
   }, 5000);
-
-sliderContainer.onmouseout = function() {
-    timer = setInterval(function () {
-        nextSlide();
-      }, 5000);
-    
-  };
- sliderContainer.onmouseover = function() {
-    clearInterval(timer);    
-  };
+};
+sliderContainer.onmouseover = function () {
+  clearInterval(timer);
+};
