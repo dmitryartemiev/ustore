@@ -166,7 +166,7 @@ nav ul li a {
 .products {
   padding: 4rem 0;
 }
-h2{
+.section-title h2{
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 5rem;
@@ -184,4 +184,16 @@ h2{
 .img-container{
   position: relative;
   overflow: hidden;
+}
+.product-img{
+  display: block;
+  width: 100%;
+  min-height: 12rem;
+}
+.bag-btn{
+  position: absolute;
+  top: 80%;
+  right: 0;
+  bprder: none;
+  background-color: rgba(r ed, green, blue, alpha)
 }
