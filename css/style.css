@@ -6,6 +6,7 @@ body {
   line-height: 1.6;
   color: black;
   /* background-color: black; */
+  caret-color: transparent;
 }
 
 *,
@@ -28,7 +29,6 @@ h1 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   text-align: center;
-  
 }
 
 /* ---Container--- */
@@ -41,7 +41,7 @@ h1 {
 
 /* ---Navigation--- */
 
-.nav-icon{
+.nav-icon {
   padding: 10px 20px;
   font-size: 2rem;
   cursor: pointer;
@@ -54,30 +54,27 @@ h1 {
 }
 nav {
   position: sticky;
-display: flex;
-align-content: center;
-justify-content: space-between;
-align-items: center;
-height: 60px;
-background-color: white;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: white;
 }
-.cart-btn{
+.cart-btn {
   position: relative;
-  
 }
 
-.cart-items{
+.cart-items {
   position: absolute;
   top: -2px;
   right: 8px;
   font-size: 1rem;
   background-color: rgba(180, 6, 6, 0.856);
-  padding: 0px 7px; 
+  padding: 0px 7px;
   border-radius: 6px;
   color: white;
-
 }
-
 
 /*nav ul {
   display: inline-block;
@@ -123,7 +120,7 @@ nav ul li a {
 .next {
   position: absolute;
   height: calc(100% - 4px);
-  z-index: 100;
+  z-index: 1;
   background-color: transparent;
   border: none;
   outline: none;
@@ -137,26 +134,26 @@ nav ul li a {
 }
 .prev::after,
 .next::after {
-  margin: 10px;
-  padding: 2px;
+  margin: .4rem;
+  padding: .3rem;
   display: inline-block;
   content: "";
   position: relative;
-  border: 3px solid #d2d7df;
+  border: .3rem solid #d2d7df;
   border-top-left-radius: 3px;
-  width: 6px;
-  height: 6px;
+  width: .2rem;
+  height: .2rem;
   border-right: none;
   border-bottom: none;
   transform: rotate(-45deg);
 }
 .next:hover,
 .next:active {
-  transform: scale(1.5) rotate(180deg);
+  transform: scale(1.3) rotate(180deg);
 }
 .prev:hover,
 .prev:active {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 /* End of slider button */
 /* ---End of slider--- */
@@ -166,13 +163,13 @@ nav ul li a {
 .products {
   padding: 4rem 0;
 }
-.section-title h2{
+.section-title h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 5rem;
   text-transform: capitalize;
 }
-.products-center{
+.products-center {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
@@ -181,19 +178,162 @@ nav ul li a {
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
 }
-.img-container{
+.product {
+  border: 0.5px solid lightgray;
+  padding: 1rem;
+  cursor: pointer;
+}
+.img-container {
   position: relative;
   overflow: hidden;
 }
-.product-img{
+.product-img {
   display: block;
   width: 100%;
   min-height: 12rem;
+  cursor: pointer;
 }
-.bag-btn{
+.bag-btn {
   position: absolute;
   top: 80%;
   right: 0;
-  bprder: none;
-  background-color: rgba(r ed, green, blue, alpha)
+  border: none;
+  background-color: rgb(0, 182, 164);
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  font-family: sans-serif;
+  transform: translateX(101%);
+  transition: 0.2s ease all;
+  letter-spacing: 0.15rem;
 }
+.product:hover .product-img {
+  opacity: 0.7;
+}
+
+.product-img:hover ~ .bag-btn,
+.bag-btn:hover {
+  transform: translateX(0);
+}
+.product:hover + .img-container .bag-btn {
+  transform: translateX(0);
+}
+.product h3 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+.product h4 {
+  /* margin-top: .7rem; */
+  font-size: 1.4rem;
+  text-align: center;
+}
+/* ---End of products--- */
+/* ---Start of Cart--- */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s all ease;
+  background: rgba(73, 80, 79, 0.514);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: rgb(240, 236, 222);
+  z-index: 3;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  transform: translateX(100%);
+}
+.showCart {
+  transform: translateX(0);
+}
+.transparentBcg {
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+.close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+/* ---Cart item--- */
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.cart-item img {
+  width: 75px;
+}
+.cart-item h4 {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+.cart-item h5 {
+  margin: 0.5rem 0;
+}
+.item-amount {
+  text-align: center;
+}
+.remove-item {
+  color: grey;
+  cursor: pointer;
+}
+.fa-chevron-up,
+.fa-chevron-down {
+  cursor: pointer;
+  color: rgb(0, 182, 164);
+}
+/* ---End of Cart item */
+.cart-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+.cart-footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.banner-btn {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border: none;
+  background-color: rgb(0, 182, 164);
+  cursor: pointer;
+  color: white;
+  outline: none;
+  transition: .2s ease all;
+}
+.banner-btn:hover {
+  outline: 1px solid black;
+  background-color: transparent;
+  color: black;
+  
+}
+/* ---End of cart item --- */
+/* ---End of Cart--- */
