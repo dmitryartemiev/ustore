@@ -74,14 +74,43 @@ class Products {
       let data = await result.json();
       let products = data.items;
       products = products.map((item) => {
-        const { title, price } = item.fields;
+        const {
+          model,
+          price,
+          type,
+          count,
+          color,
+          display,
+          memory,
+        } = item.fields;
         const { id } = item.sys;
-        const image = item.fields.image.fields.file.url1;
-        return { title, price, id, image };
+        let images;
+        for (
+          let i = 0;
+          i < Object.keys(item.fields.image.fields.file).length;
+          i++
+        ) {
+          images = Object.values(item.fields.image.fields.file);
+        }
+        console.log(images);
+        return {
+          model,
+          price,
+          id,
+          memory,
+          type,
+          count,
+          color,
+          display,
+          images,
+        };
       });
       return products;
     } catch (error) {
-      alert('Sorry, there is a problem with database of products! We are working on this! Please, contact us for manual order.');
+      console.log(products);
+      alert(
+        "Sorry, there is a problem with database of products! We are working on this! Please, contact us for manual order."
+      );
     }
   }
 }
@@ -90,11 +119,28 @@ class UI {
   displayProducts(products) {
     let result = "";
     products.forEach((product) => {
+      let status = "";
+      let statusClass = "";
+      if (product.count === 0) {
+        status = "out of stock";
+        statusClass = "out-of-stock";
+      } else if (product.count <= 12) {
+        status = "low on stock";
+        statusClass = "low-on-stock";
+      } else {
+        status = "";
+        statusClass = "";
+      }
+
+      product.memory === undefined ? (product.memory = "") : product.memory;
+      product.memory ? (product.memory += "GB") : product.memory;
+      typeof(product.display) === 'number' ? (product.display += "\"") : (product.display)
+
       result += `<!-- single product -->
       <article class="product">
         <div class="img-container">
           <img
-            src=${product.image}
+            src=${product.images[0]}
             alt="product"
             class="product-img"
           />
@@ -103,8 +149,9 @@ class UI {
             add to bag
           </button>
         </div>
-        <h3>${product.title}</h3>
+        <h3>${product.model} ${product.color} ${product.memory} ${product.display}</h3>
         <h4>$${product.price}</h4>
+        <p class="${statusClass}">${status}</p>
       </article>
       <!-- end of single product -->`;
     });

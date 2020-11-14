@@ -178,16 +178,28 @@ nav ul li a {
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
 }
+
+/* ---Single product--- */
+
+
 .product {
   border: 0.5px solid lightgray;
   padding: 1rem;
   cursor: pointer;
+  position: relative;
 }
 .img-container {
   position: relative;
   overflow: hidden;
 }
+
 .product-img {
+  display: block;
+  width: 100%;
+  min-height: 12rem;
+  cursor: pointer;
+}
+.product-img-active {
   display: block;
   width: 100%;
   min-height: 12rem;
@@ -232,6 +244,30 @@ nav ul li a {
   font-size: 1.4rem;
   text-align: center;
 }
+.out-of-stock{
+  font-size: .8rem;
+  background-color: red;
+  color: white;
+  padding: 5px 5px;
+  content: 'out of stock';
+  text-transform: uppercase;
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+}
+.low-on-stock{
+  font-size: .8rem;
+  background-color: rgb(0, 182, 164);
+  color: white;
+  padding: 5px 5px;
+  content: 'out of stock';
+  text-transform: uppercase;
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+}
+
+/* ---End of single product--- */
 /* ---End of products--- */
 /* ---Start of Cart--- */
 .cart-overlay {

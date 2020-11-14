@@ -113,7 +113,7 @@
     {
       "sys": { "id": "6" },
       "fields": {
-        "count": 12,
+        "count": 0,
         "type": "smartphone",
         "model": "iPhone 12 PRO",
         "color": "Pacific Blue",
@@ -994,26 +994,6 @@
 
     {
       "sys": { "id": "46" },
-      "fields": {
-        "count": 16,
-        "type": "watch",
-        "model": "Apple Watch Series 6",
-        "color": "Red",
-        "display": "40mm",
-        "price": 459,
-        "image": {
-          "fields": {
-            "file": {
-              "url1": "/assets/images/products/watch/apple-watch-red-1.jpeg",
-              "url2": "/assets/images/products/watch/apple-watch-red-2.jpeg",
-              "url3": "/assets/images/products/watch/apple-watch-red-3.jpeg"
-            }
-          }
-        }
-      }
-    },
-    {
-      "sys": { "id": "47" },
       "fields": {
         "count": 9,
         "type": "watch",
