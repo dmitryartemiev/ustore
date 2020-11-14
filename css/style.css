@@ -301,9 +301,7 @@ nav ul li a {
   visibility: visible;
 }
 @media screen and (min-width: 768px) {
-  h1{
-    font-size: 1rem;
-  }
+  
   .cart {
     width: 30vw;
     min-width: 450px;
@@ -375,3 +373,12 @@ nav ul li a {
 }
 /* ---End of cart item --- */
 /* ---End of Cart--- */
+
+
+/* ---Mobile devices media */
+
+@media screen and (max-width: 768px) {
+  h1{
+    font-size: 1rem;
+  }
+}
