@@ -52,13 +52,13 @@ h1 {
   max-width: 1170px;
   align-items: center;
   position: fixed;
-  top:0;
+  top: 0;
   z-index: 2;
   margin: auto;
-  left: 0; right:  0;
+  left: 0;
+  right: 0;
 }
 nav {
-  
   width: 100%;
   display: flex;
   align-content: center;
@@ -188,7 +188,6 @@ nav ul li a {
 
 /* ---Single product--- */
 
-
 .product {
   border: 0.5px solid lightgray;
   padding: 1rem;
@@ -247,31 +246,31 @@ nav ul li a {
   margin-top: 1rem;
 }
 .product h4 {
-  /* margin-top: .7rem; */
   font-size: 1.4rem;
   text-align: center;
+  color: red;
 }
-.out-of-stock{
-  font-size: .8rem;
+.out-of-stock {
+  font-size: 0.8rem;
   background-color: red;
   color: white;
   padding: 5px 5px;
-  content: 'out of stock';
+  content: "out of stock";
   text-transform: uppercase;
   position: absolute;
-  top: .5rem;
-  right: .5rem;
+  top: 0.5rem;
+  right: 0.5rem;
 }
-.low-on-stock{
-  font-size: .8rem;
+.low-on-stock {
+  font-size: 0.8rem;
   background-color: rgb(0, 182, 164);
   color: white;
   padding: 5px 5px;
-  content: 'out of stock';
+  content: "out of stock";
   text-transform: uppercase;
   position: absolute;
-  top: .5rem;
-  right: .5rem;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
 /* ---End of single product--- */
@@ -308,7 +307,6 @@ nav ul li a {
   visibility: visible;
 }
 @media screen and (min-width: 768px) {
-  
   .cart {
     width: 30vw;
     min-width: 450px;
@@ -381,18 +379,16 @@ nav ul li a {
 /* ---End of cart item --- */
 /* ---End of Cart--- */
 
-
 /* ---Mobile devices media */
 
 @media screen and (max-width: 768px) {
-  h1{
+  h1 {
     font-size: 1.2rem;
   }
   .bag-btn {
     transform: translateX(0);
   }
   .bag-btn:hover {
-    background-color:red ;
-
+    background-color: red;
   }
 }
