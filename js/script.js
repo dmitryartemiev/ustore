@@ -223,7 +223,8 @@ class UI {
 
   }
   setupAPP(){
-    
+    cart = Storage.getCart();
+    this.setCartValues(cart);
   }
 }
 //local storage
@@ -237,6 +238,9 @@ class Storage {
   }
   static saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
+  }
+  static getCart(){
+    return localStorage.getItem('cart')?JSON.parse(localStorage.getItem('cart')):[]
   }
 }
 
