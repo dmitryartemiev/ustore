@@ -47,19 +47,26 @@ h1 {
   cursor: pointer;
 }
 .nav__container {
-  margin: 0 auto;
+  position: relative;
   width: 100%;
   max-width: 1170px;
   align-items: center;
+  position: fixed;
+  top:0;
+  z-index: 2;
+  margin: auto;
+  left: 0; right:  0;
 }
 nav {
-  position: sticky;
+  
+  width: 100%;
   display: flex;
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 5rem;
   background-color: white;
+  margin: 0 auto;
 }
 .cart-btn {
   position: relative;
@@ -95,10 +102,10 @@ nav ul li a {
   height: auto;
   width: 100%;
   padding: 0;
-  margin: 0;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
+  margin-top: 5rem;
 }
 .slider__track {
   height: 100%;
@@ -278,7 +285,7 @@ nav ul li a {
   height: 100%;
   transition: 0.3s all ease;
   background: rgba(73, 80, 79, 0.514);
-  z-index: 2;
+  z-index: 3;
   visibility: hidden;
 }
 .cart {
@@ -289,7 +296,7 @@ nav ul li a {
   height: 100%;
   overflow: scroll;
   background: rgb(240, 236, 222);
-  z-index: 3;
+  z-index: 4;
   padding: 1.5rem;
   transition: all 0.2s ease;
   transform: translateX(100%);
@@ -379,6 +386,13 @@ nav ul li a {
 
 @media screen and (max-width: 768px) {
   h1{
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+  .bag-btn {
+    transform: translateX(0);
+  }
+  .bag-btn:hover {
+    background-color:red ;
+
   }
 }
