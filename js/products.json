@@ -1,0 +1,44 @@
+{
+    "items": [
+        {
+            "sys": {"id":"1"},
+            "fields":{
+                "title": "iPhone 12 PRO",
+                "price": 999,
+                "image": { "fields": {"file" : {
+                    "url":"/assets/images/products/12-pro.jpg"
+                }}}
+            }
+        },
+        {
+            "sys": {"id":"2"},
+            "fields":{
+                "title": "iPhone 12",
+                "price": 699,
+                "image": { "fields": {"file" : {
+                    "url":"/assets/images/products/12.jpg"
+                }}}
+            }
+        },
+        {
+            "sys": {"id":"3"},
+            "fields":{
+                "title": "iPhone 11",
+                "price": 599,
+                "image": { "fields": {"file" : {
+                    "url":"/assets/images/products/11.jpg"
+                }}}
+            }
+        },
+        {
+            "sys": {"id":"4"},
+            "fields":{
+                "title": "iPhone SE2",
+                "price": 399,
+                "image": { "fields": {"file" : {
+                    "url":"/assets/images/products/se.jpg"
+                }}}
+            }
+        }
+    ]
+}
