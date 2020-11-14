@@ -1,44 +1,1056 @@
 {
-    "items": [
-        {
-            "sys": {"id":"1"},
-            "fields":{
-                "title": "iPhone 12 PRO",
-                "price": 999,
-                "image": { "fields": {"file" : {
-                    "url":"/assets/images/products/12-pro.jpg"
-                }}}
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "count": 54,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Graphite",
+        "display": 6.1,
+        "memory": 128,
+        "price": 1399,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-graphite_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-graphite_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-graphite_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-graphite_4.jpeg"
             }
-        },
-        {
-            "sys": {"id":"2"},
-            "fields":{
-                "title": "iPhone 12",
-                "price": 699,
-                "image": { "fields": {"file" : {
-                    "url":"/assets/images/products/12.jpg"
-                }}}
-            }
-        },
-        {
-            "sys": {"id":"3"},
-            "fields":{
-                "title": "iPhone 11",
-                "price": 599,
-                "image": { "fields": {"file" : {
-                    "url":"/assets/images/products/11.jpg"
-                }}}
-            }
-        },
-        {
-            "sys": {"id":"4"},
-            "fields":{
-                "title": "iPhone SE2",
-                "price": 399,
-                "image": { "fields": {"file" : {
-                    "url":"/assets/images/products/se.jpg"
-                }}}
-            }
+          }
         }
-    ]
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "count": 34,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Graphite",
+        "display": 6.1,
+        "memory": 256,
+        "price": 1499,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-graphite_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-graphite_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-graphite_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-graphite_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "count": 78,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Graphite",
+        "display": 6.1,
+        "memory": 512,
+        "price": 1649,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-graphite_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-graphite_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-graphite_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-graphite_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "count": 7,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Pacific Blue",
+        "display": 6.1,
+        "memory": 128,
+        "price": 1399,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "count": 6,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Pacific Blue",
+        "display": 6.1,
+        "memory": 256,
+        "price": 1499,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "count": 12,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Pacific Blue",
+        "display": 6.1,
+        "memory": 512,
+        "price": 1649,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "count": 34,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Silver",
+        "display": 6.1,
+        "memory": 128,
+        "price": 1399,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-silver_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-silver_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-silver_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-silver_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "count": 63,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Silver",
+        "display": 6.1,
+        "memory": 256,
+        "price": 1499,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-silver_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-silver_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-silver_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-silver_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "9" },
+      "fields": {
+        "count": 23,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Silver",
+        "display": 6.1,
+        "memory": 512,
+        "price": 1649,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-silver_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-silver_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-silver_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-silver_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "10" },
+      "fields": {
+        "count": 14,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Gold",
+        "display": 6.1,
+        "memory": 128,
+        "price": 1399,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-gold_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-gold_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-gold_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-gold_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "11" },
+      "fields": {
+        "count": 11,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Gold",
+        "display": 6.1,
+        "memory": 256,
+        "price": 1499,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-gold_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-gold_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-gold_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-gold_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "12" },
+      "fields": {
+        "count": 23,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO",
+        "color": "Gold",
+        "display": 6.1,
+        "memory": 512,
+        "price": 1649,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-gold_1.jpeg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-gold_2.jpg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-gold_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-gold_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "13" },
+      "fields": {
+        "count": 12,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Graphite",
+        "display": 6.7,
+        "memory": 128,
+        "price": 1449,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-graphite_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-graphite_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-graphite_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-graphite_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "14" },
+      "fields": {
+        "count": 43,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Graphite",
+        "display": 6.7,
+        "memory": 256,
+        "price": 1599,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-graphite_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-graphite_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-graphite_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-graphite_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "15" },
+      "fields": {
+        "count": 3,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Graphite",
+        "display": 6.7,
+        "memory": 512,
+        "price": 1849,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-graphite_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-graphite_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-graphite_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-graphite_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "16" },
+      "fields": {
+        "count": 43,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Pacific Blue",
+        "display": 6.7,
+        "memory": 128,
+        "price": 1449,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "17" },
+      "fields": {
+        "count": 23,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Pacific Blue",
+        "display": 6.7,
+        "memory": 256,
+        "price": 1599,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "18" },
+      "fields": {
+        "count": 3,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Pacific Blue",
+        "display": 6.7,
+        "memory": 512,
+        "price": 1849,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-pacific-blue_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "19" },
+      "fields": {
+        "count": 43,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Silver",
+        "display": 6.7,
+        "memory": 128,
+        "price": 1449,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-silver_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-silver_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-silver_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-silver_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "20" },
+      "fields": {
+        "count": 23,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Silver",
+        "display": 6.7,
+        "memory": 256,
+        "price": 1599,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-silver_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-silver_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-silver_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-silver_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "21" },
+      "fields": {
+        "count": 4,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Silver",
+        "display": 6.7,
+        "memory": 512,
+        "price": 1849,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-silver_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-silver_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-silver_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-silver_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "22" },
+      "fields": {
+        "count": 53,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Gold",
+        "display": 6.7,
+        "memory": 128,
+        "price": 1449,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-gold_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-gold_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-gold_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-gold_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "23" },
+      "fields": {
+        "count": 21,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Gold",
+        "display": 6.7,
+        "memory": 256,
+        "price": 1599,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-gold_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-gold_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-gold_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-gold_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "24" },
+      "fields": {
+        "count": 12,
+        "type": "smartphone",
+        "model": "iPhone 12 PRO Max",
+        "color": "Gold",
+        "display": 6.7,
+        "memory": 512,
+        "price": 1849,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/iphone/iphone-12-pro-gold_2.jpg",
+              "url2": "/assets/images/products/iphone/iphone-12-pro-gold_1.jpeg",
+              "url3": "/assets/images/products/iphone/iphone-12-pro-gold_3.jpeg",
+              "url4": "/assets/images/products/iphone/iphone-12-pro-gold_4.jpeg"
+            }
+          }
+        }
+      }
+    },
+
+    {
+      "sys": { "id": "25" },
+      "fields": {
+        "count": 11,
+        "type": "notebook",
+        "model": "MacBook Air",
+        "color": "Silver",
+        "display": 13,
+        "memory": 256,
+        "price": 1049,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/macbook/macbook-air-silver-1.jpg",
+              "url2": "/assets/images/products/macbook/macbook-air-silver-2.jpg",
+              "url3": "/assets/images/products/macbook/macbook-air-silver-3.jpg",
+              "url4": "/assets/images/products/macbook/macbook-air-silver-4.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "26" },
+      "fields": {
+        "count": 13,
+        "type": "notebook",
+        "model": "MacBook Air",
+        "color": "Silver",
+        "display": 13,
+        "memory": 512,
+        "price": 1349,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/macbook/macbook-air-silver-1.jpg",
+              "url2": "/assets/images/products/macbook/macbook-air-silver-2.jpg",
+              "url3": "/assets/images/products/macbook/macbook-air-silver-3.jpg",
+              "url4": "/assets/images/products/macbook/macbook-air-silver-4.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "27" },
+      "fields": {
+        "count": 7,
+        "type": "notebook",
+        "model": "MacBook Air",
+        "color": "Space Gray",
+        "display": 13,
+        "memory": 256,
+        "price": 1049,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/macbook/macbook-air-space-gray-1.jpg",
+              "url2": "/assets/images/products/macbook/macbook-air-space-gray-2.jpg",
+              "url3": "/assets/images/products/macbook/macbook-air-space-gray-3.jpg",
+              "url4": "/assets/images/products/macbook/macbook-air-space-gray-4.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "28" },
+      "fields": {
+        "count": 8,
+        "type": "notebook",
+        "model": "MacBook Air",
+        "color": "Space Gray",
+        "display": 13,
+        "memory": 512,
+        "price": 1349,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/macbook/macbook-air-space-gray-1.jpg",
+              "url2": "/assets/images/products/macbook/macbook-air-space-gray-2.jpg",
+              "url3": "/assets/images/products/macbook/macbook-air-space-gray-3.jpg",
+              "url4": "/assets/images/products/macbook/macbook-air-space-gray-4.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "29" },
+      "fields": {
+        "count": 13,
+        "type": "notebook",
+        "model": "MacBook Air",
+        "color": "Gold",
+        "display": 13,
+        "memory": 256,
+        "price": 1049,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/macbook/macbook-air-gold-1.jpg",
+              "url2": "/assets/images/products/macbook/macbook-air-gold-2.jpg",
+              "url3": "/assets/images/products/macbook/macbook-air-gold-3.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "29" },
+      "fields": {
+        "count": 2,
+        "type": "notebook",
+        "model": "MacBook Air",
+        "color": "Gold",
+        "display": 13,
+        "memory": 512,
+        "price": 1349,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/macbook/macbook-air-gold-1.jpg",
+              "url2": "/assets/images/products/macbook/macbook-air-gold-2.jpg",
+              "url3": "/assets/images/products/macbook/macbook-air-gold-3.jpg"
+            }
+          }
+        }
+      }
+    },
+
+    {
+      "sys": { "id": "30" },
+      "fields": {
+        "count": 13,
+        "type": "tablet",
+        "model": "iPad Pro",
+        "color": "Silver",
+        "display": 11,
+        "memory": 128,
+        "price": 899,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/ipad/ipad-pro-silver-1.jpg",
+              "url2": "/assets/images/products/ipad/ipad-pro-1.jpeg",
+              "url3": "/assets/images/products/ipad/ipad-pro-2.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "31" },
+      "fields": {
+        "count": 16,
+        "type": "tablet",
+        "model": "iPad Pro",
+        "color": "Silver",
+        "display": 11,
+        "memory": 256,
+        "price": 999,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/ipad/ipad-pro-silver-1.jpg",
+              "url2": "/assets/images/products/ipad/ipad-pro-1.jpeg",
+              "url3": "/assets/images/products/ipad/ipad-pro-2.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "32" },
+      "fields": {
+        "count": 9,
+        "type": "tablet",
+        "model": "iPad Pro",
+        "color": "Silver",
+        "display": 11,
+        "memory": 512,
+        "price": 1249,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/ipad/ipad-pro-silver-1.jpg",
+              "url2": "/assets/images/products/ipad/ipad-pro-1.jpeg",
+              "url3": "/assets/images/products/ipad/ipad-pro-2.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "33" },
+      "fields": {
+        "count": 23,
+        "type": "tablet",
+        "model": "iPad Pro",
+        "color": "Silver",
+        "display": 11,
+        "memory": 1000,
+        "price": 1499,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/ipad/ipad-pro-silver-1.jpg",
+              "url2": "/assets/images/products/ipad/ipad-pro-1.jpeg",
+              "url3": "/assets/images/products/ipad/ipad-pro-2.jpg"
+            }
+          }
+        }
+      }
+    },
+
+    {
+      "sys": { "id": "34" },
+      "fields": {
+        "count": 8,
+        "type": "tablet",
+        "model": "iPad Pro",
+        "color": "Space Gray",
+        "display": 11,
+        "memory": 128,
+        "price": 899,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/ipad/ipad-pro-space-gray-1.jpg",
+              "url2": "/assets/images/products/ipad/ipad-pro-1.jpeg",
+              "url3": "/assets/images/products/ipad/ipad-pro-2.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "35" },
+      "fields": {
+        "count": 22,
+        "type": "tablet",
+        "model": "iPad Pro",
+        "color": "Space Gray",
+        "display": 11,
+        "memory": 256,
+        "price": 999,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/ipad/ipad-pro-space-gray-1.jpg",
+              "url2": "/assets/images/products/ipad/ipad-pro-1.jpeg",
+              "url3": "/assets/images/products/ipad/ipad-pro-2.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "36" },
+      "fields": {
+        "count": 13,
+        "type": "tablet",
+        "model": "iPad Pro",
+        "color": "Space Gray",
+        "display": 11,
+        "memory": 512,
+        "price": 1249,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/ipad/ipad-pro-space-gray-1.jpg",
+              "url2": "/assets/images/products/ipad/ipad-pro-1.jpeg",
+              "url3": "/assets/images/products/ipad/ipad-pro-2.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "37" },
+      "fields": {
+        "count": 14,
+        "type": "tablet",
+        "model": "iPad Pro",
+        "color": "Space Gray",
+        "display": 11,
+        "memory": 1000,
+        "price": 1499,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/ipad/ipad-pro-space-gray-1.jpg",
+              "url2": "/assets/images/products/ipad/ipad-pro-1.jpeg",
+              "url3": "/assets/images/products/ipad/ipad-pro-2.jpg"
+            }
+          }
+        }
+      }
+    },
+
+    {
+      "sys": { "id": "38" },
+      "fields": {
+        "count": 15,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Silver",
+        "display": "44mm",
+        "price": 495,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-silver-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-silver-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-silver-3.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "39" },
+      "fields": {
+        "count": 11,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Silver",
+        "display": "40mm",
+        "price": 449,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-silver-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-silver-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-silver-3.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "40" },
+      "fields": {
+        "count": 15,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Space Gray",
+        "display": "44mm",
+        "price": 499,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-space-gray-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-space-gray-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-space-gray-3.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "41" },
+      "fields": {
+        "count": 13,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Space Gray",
+        "display": "40mm",
+        "price": 449,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-space-gray-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-space-gray-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-space-gray-3.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "42" },
+      "fields": {
+        "count": 17,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Gold",
+        "display": "44mm",
+        "price": 504,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-gold-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-gold-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-gold-3.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "43" },
+      "fields": {
+        "count": 18,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Gold",
+        "display": "40mm",
+        "price": 459,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-gold-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-gold-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-gold-3.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "44" },
+      "fields": {
+        "count": 4,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Red",
+        "display": "44mm",
+        "price": 504,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-red-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-red-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-red-3.jpeg"
+            }
+          }
+        }
+      }
+    },
+
+    {
+      "sys": { "id": "45" },
+      "fields": {
+        "count": 5,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Red",
+        "display": "40mm",
+        "price": 459,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-red-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-red-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-red-3.jpeg"
+            }
+          }
+        }
+      }
+    },
+
+    {
+      "sys": { "id": "46" },
+      "fields": {
+        "count": 16,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Red",
+        "display": "40mm",
+        "price": 459,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-red-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-red-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-red-3.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "47" },
+      "fields": {
+        "count": 9,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Blue",
+        "display": "44mm",
+        "price": 529,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-blue-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-blue-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-blue-3.jpeg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "47" },
+      "fields": {
+        "count": 4,
+        "type": "watch",
+        "model": "Apple Watch Series 6",
+        "color": "Blue",
+        "display": "40mm",
+        "price": 439,
+        "image": {
+          "fields": {
+            "file": {
+              "url1": "/assets/images/products/watch/apple-watch-blue-1.jpeg",
+              "url2": "/assets/images/products/watch/apple-watch-blue-2.jpeg",
+              "url3": "/assets/images/products/watch/apple-watch-blue-3.jpeg"
+            }
+          }
+        }
+      }
+    }
+  ]
 }

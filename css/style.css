@@ -134,15 +134,15 @@ nav ul li a {
 }
 .prev::after,
 .next::after {
-  margin: .4rem;
-  padding: .3rem;
+  margin: 0.4rem;
+  padding: 0.3rem;
   display: inline-block;
   content: "";
   position: relative;
-  border: .3rem solid #d2d7df;
+  border: 0.3rem solid #d2d7df;
   border-top-left-radius: 3px;
-  width: .2rem;
-  height: .2rem;
+  width: 0.2rem;
+  height: 0.2rem;
   border-right: none;
   border-bottom: none;
   transform: rotate(-45deg);
@@ -163,7 +163,7 @@ nav ul li a {
 .products {
   padding: 4rem 0;
 }
-.section-title h2 {
+.section-model h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 5rem;
@@ -327,13 +327,12 @@ nav ul li a {
   cursor: pointer;
   color: white;
   outline: none;
-  transition: .2s ease all;
+  transition: 0.2s ease all;
 }
 .banner-btn:hover {
   outline: 1px solid black;
   background-color: transparent;
   color: black;
-  
 }
 /* ---End of cart item --- */
 /* ---End of Cart--- */
