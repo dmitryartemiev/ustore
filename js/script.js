@@ -292,7 +292,7 @@ class UI {
     return buttonsDOM.find((button) => button.dataset.id === id);
   }
 }
-//local storage
+//local storage class
 class Storage {
   static saveProducts(products) {
     localStorage.setItem("products", JSON.stringify(products));
