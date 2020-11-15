@@ -239,7 +239,7 @@ class UI {
     clearCartBtn.addEventListener("click", () => {
       this.clearCart();
     });
-    // cart functionality
+    // cart functionality add
     cartContent.addEventListener("click", (event) => {
       if (event.target.classList.contains("remove-item")) {
         let removeItem = event.target;
