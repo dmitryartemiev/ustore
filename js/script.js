@@ -67,6 +67,7 @@ const btns = document.querySelectorAll(".bag-btn");
 // cart
 let cart = [];
 let buttonsDOM = [];
+let startCount = [];
 
 //getting the products
 class Products {
@@ -81,6 +82,7 @@ class Products {
           price,
           type,
           count,
+          startCount,
           color,
           display,
           memory,
@@ -101,6 +103,7 @@ class Products {
           memory,
           type,
           count,
+          startCount,
           color,
           display,
           images,
@@ -118,9 +121,30 @@ class Products {
 class UI {
   displayProducts(products) {
     let result = "";
+
     products.forEach((product) => {
+      let storageProductCount;
+      let storageProductId;
+      for (
+        let i = 0;
+        i < JSON.parse(localStorage.getItem("cart")).length;
+        i++
+      ) {
+        storageProductId = Number(
+          JSON.parse(localStorage.getItem("cart"))[i].id
+        );
+        storageProductCount = Number(
+          JSON.parse(localStorage.getItem("cart"))[i].count
+        );
+
+        if (product.id == storageProductId) {
+          product.count = storageProductCount;
+        }
+      }
+
       let status = "";
       let statusClass = "";
+
       if (product.count === 0) {
         status = "out of stock";
         statusClass = "out-of-stock";
@@ -139,7 +163,7 @@ class UI {
         : product.display;
 
       result += `<!-- single product -->
-      <article class="product">
+      <article class="product"  >
         <div class="img-container">
           <img
             src=${product.images[0]}
@@ -153,7 +177,7 @@ class UI {
         </div>
         <h3>${product.model} ${product.color} ${product.memory} ${product.display}</h3>
         <h4>$${product.price}</h4>
-        <p class="${statusClass}">${status}</p>
+        <p class="status ${statusClass}">${status}</p>
       </article>
       <!-- end of single product -->`;
     });
@@ -168,6 +192,12 @@ class UI {
       if (inCart) {
         button.innerText = "In Cart";
         button.disabled = true;
+        button.style = "color: gray";
+      }
+      let countItem = { ...Storage.getProduct(id) }.count;
+      if (countItem === 0) {
+        button.disabled = true;
+        button.style = "color: gray";
       }
       button.addEventListener("click", (event) => {
         event.target.innerText = "In Cart";
@@ -175,7 +205,7 @@ class UI {
         event.target.style = "color:gray";
         //get product from products
         let cartItem = { ...Storage.getProduct(id), amount: 1 };
-        console.log(cartItem);
+        cartItem.count--;
         //add product to the cart
         cart = [...cart, cartItem];
         //save cart in local storage
@@ -199,6 +229,7 @@ class UI {
     cartTotal.innerText = "$" + parseFloat(tempTotal.toFixed(2));
     cartItems.innerText = itemsTotal;
   }
+
   addCartItem(item) {
     const div = document.createElement("div");
     div.classList.add("cart-item");
@@ -244,49 +275,112 @@ class UI {
       if (event.target.classList.contains("remove-item")) {
         let removeItem = event.target;
         let id = removeItem.dataset.id;
+
         cartContent.removeChild(removeItem.parentElement.parentElement);
+
         this.removeItem(id);
       } else if (event.target.classList.contains("fa-chevron-up")) {
         let addAmount = event.target;
         let id = addAmount.dataset.id;
         let tempItem = cart.find((item) => item.id === id);
-        tempItem.amount = tempItem.amount + 1;
-        Storage.saveCart(cart);
-        this.setCartValues(cart);
-        addAmount.nextElementSibling.innerText = tempItem.amount;
+        let productElement = document.getElementsByClassName("status")[
+          tempItem.id - 1
+        ];
+        console.log(productElement);
+
+        if (tempItem.count > 0) {
+          tempItem.count = tempItem.count - 1;
+          tempItem.amount = tempItem.amount + 1;
+          Storage.saveCart(cart);
+          this.setCartValues(cart);
+          addAmount.nextElementSibling.innerText = tempItem.amount;
+          if (tempItem.count < 12) {
+            productElement.classList.add("low-on-stock");
+            productElement.textContent = "low on stock";
+          }
+          if (tempItem.count === 0) {
+            productElement.classList.remove("low-on-stock");
+            productElement.classList.add("out-of-stock");
+            productElement.textContent = "out of stock";
+          }
+        }
       } else if (event.target.classList.contains("fa-chevron-down")) {
         let lowerAmount = event.target;
         let id = lowerAmount.dataset.id;
         let tempItem = cart.find((item) => item.id === id);
         tempItem.amount = tempItem.amount - 1;
+        tempItem.count = tempItem.count + 1;
+        let productElement = document.getElementsByClassName("status")[
+          tempItem.id - 1
+        ];
         if (tempItem.amount > 0) {
           Storage.saveCart(cart);
           this.setCartValues(cart);
           lowerAmount.previousElementSibling.innerText = tempItem.amount;
+
+          if (tempItem.count > 0) {
+            productElement.classList.remove("out-of-stock");
+            productElement.classList.add("low-on-stock");
+            productElement.textContent = "low on stock";
+          }
+          if (tempItem.count > 12) {
+            productElement.classList.remove("low-on-stock");
+            productElement.textContent = "";
+          }
         } else {
           cartContent.removeChild(lowerAmount.parentElement.parentElement);
           this.removeItem(id);
         }
+        console.log(productElement);
       }
     });
   }
   clearCart() {
     let cartItems = cart.map((item) => item.id);
     cartItems.forEach((id) => this.removeItem(id));
-    console.log(cartContent.children);
     while (cartContent.children.length > 0) {
       cartContent.removeChild(cartContent.children[0]);
     }
+
     this.hideCart();
   }
+
   removeItem(id) {
     cart = cart.filter((item) => item.id !== id);
+    let cartStartCount;
+    for (let i = 0; i < JSON.parse(localStorage.getItem("cart")).length; i++) {
+      let cartArr = JSON.parse(localStorage.getItem("cart"))[i];
+      cartStartCount = cartArr.startCount;
+      console.log(cartStartCount);
+
+      if (cartArr.id === id) {
+        let productElement = document.getElementsByClassName("status")[id - 1];
+        if (cartStartCount < 12) {
+          productElement.classList.remove("out-of-stock");
+          productElement.classList.add("low-on-stock");
+          productElement.textContent = "low on stock";
+        }
+        if (cartStartCount === 0) {
+          productElement.classList.add("out-of-stock");
+          productElement.classList.remove("low-on-stock");
+          productElement.textContent = "out of stock";
+        }
+        if (cartStartCount >= 12) {
+          productElement.classList.remove("out-of-stock");
+          productElement.classList.remove("low-on-stock");
+          productElement.textContent = "";
+        }
+      }
+    }
     this.setCartValues(cart);
     Storage.saveCart(cart);
     let button = this.getSingleButton(id);
     button.disabled = false;
     button.innerHTML = `<i class ="fas fa-shopping-cart"></i>add to cart`;
     button.style = "color: white";
+
+    // console.log(result)
+    // console.log(id);
   }
   getSingleButton(id) {
     return buttonsDOM.find((button) => button.dataset.id === id);
