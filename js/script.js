@@ -378,9 +378,6 @@ class UI {
     button.disabled = false;
     button.innerHTML = `<i class ="fas fa-shopping-cart"></i>add to cart`;
     button.style = "color: white";
-
-    // console.log(result)
-    // console.log(id);
   }
   getSingleButton(id) {
     return buttonsDOM.find((button) => button.dataset.id === id);
