@@ -89,20 +89,58 @@ nav {
   border-radius: 6px;
   color: white;
 }
-
-/*nav ul {
-  display: inline-block;
-  list-style: none;
-}
-nav ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-nav ul li a {
+nav a, .contacts p a {
   text-decoration: none;
-  color: #333;
-} */
+  color: black;
+  font-size: 1rem;
+  transition: .3s ease all;
+}
 
+nav a:hover {
+  color: rgb(0, 182, 164);
+  transform: scale(1.1);
+
+}
+h1 a{
+  font-size: 2rem;
+}
+/* ---Start of Search bar-- */
+
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid grey;
+  float: left;
+  /* width: auto; */
+  background: #f1f1f1;
+  /* display: flex; */
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  /* width: 20%; */
+  padding: 10px 6px;
+  background: rgb(0, 182, 164);
+  color: white;
+  font-size: 1rem;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* ---End of search bar --- */
 /* ---Slider--- */
 
 .slider__container {
@@ -171,6 +209,49 @@ nav ul li a {
 }
 /* End of slider button */
 /* ---End of slider--- */
+
+/* Start of banner */
+.catalog{
+  padding: 4rem 0;
+}
+.banner{
+  display: block;
+   max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+}
+.banner img{
+  transition: .2s ease all;
+  width: 100%;
+  cursor: pointer;
+}
+.banner img:hover{
+  transform: scale(1.05);
+}
+.banner img:hover ~ .banner-text{
+  transform: scale(1.2);
+}
+
+.banner-text{
+  margin: auto;
+position: absolute;
+top: 2rem; right: 0; left: 0; 
+color: white;
+text-transform: uppercase;
+transition: .2s ease all;
+font-size: 5rem;
+font-weight: 700;
+cursor: pointer;
+}
+.banner-text{
+  text-decoration: none;
+  color: white;
+}
+/* End of banner */
 
 /* ---Products--- */
 
@@ -448,6 +529,9 @@ transform: scale(1.1);
   font-weight: 700;
   font-size: 2rem;
   
+}
+.contacts p a{
+  color: white;
 }
 /* End of footer */
 
