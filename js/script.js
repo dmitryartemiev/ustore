@@ -1,4 +1,3 @@
-
 // -----START OF CART-----
 
 //Variables
@@ -111,24 +110,70 @@ class UI {
         ? (product.display += '"')
         : product.display;
 
-      result += `<!-- single product -->
-      <article class="product"  >
+      result +=
+      //  `<!-- single product -->
+      // <article class="product"  >
+      //   <div class="img-container">
+      //     <img
+      //       src=${product.images[0]}
+      //       alt="product"
+      //       class="product-img"
+      //     />
+      //     <button class="bag-btn" data-id="${product.id}">
+      //       <i class="fas fa-shopping-cart"></i>
+      //       add to cart
+      //     </button>
+      //   </div>
+      //   <h3>${product.model} ${product.color} ${product.memory} ${product.display}</h3>
+      //   <h4>$${product.price}</h4>
+      //   <p class="status ${statusClass}">${status}</p>
+      // </article>
+      // <!-- end of single product -->`;
+
+      `<!-- single product -->
+      <article class="product">
         <div class="img-container">
           <img
             src=${product.images[0]}
             alt="product"
+            style="
+              display: block;
+              width: 100%;
+              min-height: 12rem;
+              cursor: pointer;
+            "
             class="product-img"
+            id="current-${product.id}"
           />
+          <div class="slider-container">
+            <img
+              src=${product.images[0]}
+              alt="product"
+              class="product-img thumbnail"
+            />
+
+            <img
+              src=${product.images[1]}
+              alt="product"
+              class="product-img thumbnail"
+            />
+            <img
+              src=${product.images[2]}
+              alt="product"
+              class="product-img thumbnail"
+            />
+            <img src=${product.images[3]} alt="product" class="product-img thumbnail"> 
+          </div>
           <button class="bag-btn" data-id="${product.id}">
-            <i class="fas fa-shopping-cart"></i>
-            add to cart
-          </button>
-        </div>
-        <h3>${product.model} ${product.color} ${product.memory} ${product.display}</h3>
-        <h4>$${product.price}</h4>
-        <p class="status ${statusClass}">${status}</p>
-      </article>
-      <!-- end of single product -->`;
+          <i class="fas fa-shopping-cart"></i>
+          add to cart
+        </button>
+      </div>
+      <h3>${product.model} ${product.color} ${product.memory} ${product.display}</h3>
+      <h4>$${product.price}</h4>
+      <p class="status ${statusClass}">${status}</p>
+    </article>
+    <!-- end of single product -->`;
     });
     productsDOM.innerHTML = result;
   }
@@ -368,3 +413,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ui.cartLogic();
     });
 });
+
+
+
+
