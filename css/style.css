@@ -362,7 +362,7 @@ ul.breadcrumb li a:hover {
 .product {
   border: 0.5px solid lightgray;
   padding: 1rem;
-  cursor: pointer;
+  /* cursor: pointer; */
   position: relative;
 }
 .img-container {
@@ -410,7 +410,7 @@ ul.breadcrumb li a:hover {
 
 .bag-btn {
   position: absolute;
-  top: 80%;
+  top: 68%;
   right: 0;
   border: none;
   background-color: rgb(0, 182, 164);
@@ -425,17 +425,16 @@ ul.breadcrumb li a:hover {
   transition: 0.2s ease all;
   letter-spacing: 0.15rem;
 }
-.product:hover .product-img {
-  /* opacity: 0.7; */
+
+
+.product:hover .bag-btn {
+  transform: translateX(0);
 }
 
-.product-img:hover ~ .bag-btn,
-.bag-btn:hover {
-  transform: translateX(0);
+.bag-btn:hover{
+  background-color: red;
 }
-.product:hover + .img-container .bag-btn {
-  transform: translateX(0);
-}
+
 .product h3 {
   text-align: center;
   text-transform: capitalize;
@@ -607,7 +606,35 @@ ul.breadcrumb li a:hover {
 /* ---End of cart item --- */
 /* ---End of Cart--- */
 
-/* ---Start of footer */
+/* --Start of pagination--- */
+.pagination{
+  margin-bottom: 1rem;
+
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-left:0;
+}
+.pagination li{
+  padding: 0 .5rem;
+  font-size: 1.3rem;
+  border: 1px solid black;
+  margin-left: .5rem;
+  transition: .1s ease all;
+  cursor: pointer;
+}
+.pagination li:hover{
+  background-color: rgb(0, 182, 164);
+  color: white;
+  transform: translateY(-5px);
+}
+.active-page{
+  background-color: rgb(0, 182, 164);
+  color: white;
+}
+/* ---End of pagination--- */
+
+/* ---Start of footer-- */
 .footer-container {
   max-width: 1170px;
   margin: 0 auto;

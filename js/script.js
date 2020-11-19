@@ -110,28 +110,14 @@ class UI {
         ? (product.display += '"')
         : product.display;
 
-      result +=
-      //  `<!-- single product -->
-      // <article class="product"  >
-      //   <div class="img-container">
-      //     <img
-      //       src=${product.images[0]}
-      //       alt="product"
-      //       class="product-img"
-      //     />
-      //     <button class="bag-btn" data-id="${product.id}">
-      //       <i class="fas fa-shopping-cart"></i>
-      //       add to cart
-      //     </button>
-      //   </div>
-      //   <h3>${product.model} ${product.color} ${product.memory} ${product.display}</h3>
-      //   <h4>$${product.price}</h4>
-      //   <p class="status ${statusClass}">${status}</p>
-      // </article>
-      // <!-- end of single product -->`;
-
-      `<!-- single product -->
-      <article class="product">
+      for (let i = 0; i < 10; i++) {
+        if (product.images[i] === undefined) {
+          product.images[i] = `0 style='display:none'`;
+        }
+      }
+      let color = product.color.toLowerCase().replace(/ /g, "-");
+      result += `<!-- single product -->
+      <article style="display:none" class="product ${product.type} memory-${product.memory} price-${product.price} ${color}">
         <div class="img-container">
           <img
             src=${product.images[0]}
@@ -413,7 +399,3 @@ document.addEventListener("DOMContentLoaded", () => {
       ui.cartLogic();
     });
 });
-
-
-
-
