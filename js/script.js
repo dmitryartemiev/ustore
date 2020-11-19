@@ -117,7 +117,7 @@ class UI {
       }
       let color = product.color.toLowerCase().replace(/ /g, "-");
       result += `<!-- single product -->
-      <article style="display:none" class="product ${product.type} memory-${product.memory} price-${product.price} ${color}">
+      <article  class="product ${product.type} memory-${product.memory} price-${product.price} ${color}">
         <div class="img-container">
           <img
             src=${product.images[0]}
