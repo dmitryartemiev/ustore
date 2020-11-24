@@ -1,48 +1,237 @@
 "use strict";
+setTimeout(() => {
+  let filtersArr = ["all-of-types"];
 
-// Type of device radio filters
+  let inputType = [...document.getElementsByName("type")];
+  let checkboxColor = [...document.getElementsByName("color")];
+  let checkboxMemory = [...document.getElementsByName("memory")];
+  let priceRange = document.getElementById("price-range");
 
-let inputType = [...document.getElementsByName("type")];
+  //fill filters arr
 
-for (let singleButton of inputType) {
-  singleButton.addEventListener("click", () => {
+  function fillFiltersWithColor() {
     for (let i = 0; i < [...productsDOM.children].length; i++) {
-      let productClasses = [...[...productsDOM.children][i].classList];
-      const match = (element) => element === singleButton.value;
-      if (productClasses.some(match)) {
-        productsDOM.children[i].style.display = "block";
-        productsDOM.children[i].classList.add("checked-by-type");
-      } else {
-        productsDOM.children[i].style.display = "none";
-        productsDOM.children[i].classList.remove("checked-by-type");
-      }
-      if (singleButton.value === "all-of-types") {
-        productsDOM.children[i].style.display = "block";
-        productsDOM.children[i].classList.remove("checked-by-type");
+      if (
+        !filtersArr.includes(
+          String(
+            [...productsDOM.children[i].classList].filter((color) =>
+              color.match(/color-/gm)
+            )
+          )
+        )
+      ) {
+        filtersArr.push(
+          String(
+            [...productsDOM.children[i].classList].filter((color) =>
+              color.match(/color-/gm)
+            )
+          )
+        );
       }
     }
+  }
+  fillFiltersWithColor();
+
+  //fill colors
+  for (let singleColor of checkboxColor) {
+    singleColor.addEventListener("click", () => {
+      if (
+        filtersArr.filter((color) => color.match(/color-/gm)).length ==
+        checkboxColor.length
+      ) {
+        for (let i = 0; i < filtersArr.length; i++) {
+          if (filtersArr[i].match(/color-/gm)) {
+            filtersArr.splice(
+              filtersArr.indexOf(filtersArr[i]),
+              checkboxColor.length
+            );
+          }
+        }
+      }
+
+      if (singleColor.checked) {
+        filtersArr.push("color-" + singleColor.value);
+        console.log(filtersArr);
+      } else {
+        filtersArr.splice(filtersArr.indexOf("color-" + singleColor.value), 1);
+        if (filtersArr.filter((color) => color.match(/color-/gm)).length == 0) {
+          fillFiltersWithColor();
+        }
+        console.log(filtersArr);
+      }
+    });
+  }
+
+  //fill memory
+  for (let singleMemory of checkboxMemory) {
+    singleMemory.addEventListener("click", () => {
+      if (singleMemory.checked) {
+        filtersArr.push("memory-" + singleMemory.value + "GB");
+        console.log(filtersArr);
+      } else {
+        filtersArr.splice(
+          filtersArr.indexOf("memory-" + singleMemory.value + "GB"),
+          1
+        );
+        console.log(filtersArr);
+      }
+    });
+  }
+  //fill device types
+  let singleTypeVal;
+  for (let singleType of inputType) {
+    singleType.addEventListener("click", () => {
+      if (singleType.checked) {
+        for (let i = 0; i < inputType.length; i++) {
+          if (filtersArr.includes(inputType[i].value)) {
+            filtersArr.splice(filtersArr.indexOf(inputType[i].value), 1);
+          }
+        }
+
+        filtersArr.push(singleType.value);
+
+        singleTypeVal = singleType.value;
+        console.log(filtersArr);
+      }
+    });
+  }
+  // find max price of products and place it to price input range
+  let priceArr = [];
+  for (let i = 0; i < productsDOM.children.length; i++) {
+    let classArrProdDOM = [...productsDOM.children[i].classList];
+    let price = classArrProdDOM.find((price) => {
+      return price.includes("price");
+    });
+    priceArr.push(+price.substr(6));
+  }
+  priceRange.max = Math.max.apply(null, priceArr);
+  priceRange.min = Math.min.apply(null, priceArr);
+  filtersArr.push("price-" + priceRange.max);
+
+  //fill by price range
+  let priceRangeLabel = document.getElementById("price-count");
+  priceRange.addEventListener("input", () => {
+    priceRangeLabel.innerText = "$" + priceRange.value;
+
+    if (filtersArr.some((e) => /price-\d+/gm.test(e))) {
+      filtersArr.splice(
+        filtersArr.indexOf(
+          filtersArr.find((value) => /price-\d+/gm.test(value))
+        ),
+        1
+      );
+    }
+    filtersArr.push("price-" + priceRange.value);
+    console.log(filtersArr);
   });
-}
+  priceRange.addEventListener(
+    "change",
+    () => {
+      for (let k = 0; k < [...productsDOM.children].length; k++) {
+        let singlePrice = +String([...productsDOM.children[k].classList].filter((price) =>price.match(/price-/gm))).match(/\d+/gm);
+        let priceFilterArr = +String(filtersArr.filter((price) => price.match(/price-/gm))).match(/\d+/gm);
 
-// Color of device checkbox filters
+        let rangeColor = String([...productsDOM.children[k].classList].filter((price) => price.match(/color-/gm)));
 
-// let checkboxColor = [...document.getElementsByName("color")];
-// for (let singleCheck of checkboxColor) {
-//   singleCheck.addEventListener("click", () => {
-//     for (let i = 0; i < [...productsDOM.children].length; i++) {
-    
-//       let productClasses = [...[...productsDOM.children][i].classList];
-    
+        let rangeType = String([...productsDOM.children[k].classList].filter((price) => price.match(/type/gm)));
 
-//       const matchColor = (element) => element === singleCheck.value;
-     
-//       console.log(!productClasses.some(matchColor))
-//       if (productClasses.some(matchColor) && productsDOM.children[i].classList.contains('checked-by-type')) {
-//         productsDOM.children[i].style.display = "block";
-//       }
-//     //    else if (!singleCheck.cheсked && !productClasses.some(matchColor) ) {
-//     //     productsDOM.children[i].style.display = "none";
-//     //   }
-//     }
-//   });
-// }
+        if( singlePrice<=priceFilterArr){
+          if(filtersArr.includes(rangeColor)){
+            if(filtersArr.includes(rangeType)){
+              [...productsDOM.children][k].classList.add('show');
+              [...productsDOM.children][k].classList.remove('hide')
+            }else if(filtersArr.includes('all-of-types')){
+              [...productsDOM.children][k].classList.add('show');
+              [...productsDOM.children][k].classList.remove('hide')
+            }
+            else{
+              [...productsDOM.children][k].classList.remove('show');
+              [...productsDOM.children][k].classList.add('hide')
+            }
+          }else{
+            [...productsDOM.children][k].classList.remove('show');
+            [...productsDOM.children][k].classList.add('hide')
+          }
+        }else{
+          [...productsDOM.children][k].classList.remove('show');
+          [...productsDOM.children][k].classList.add('hide')
+        }
+
+      }
+
+    },
+    false
+  );
+
+  //check product classlist with filters arr
+
+  let inputs = [...document.getElementsByTagName("input")];
+  inputs = inputs.filter((n) => {
+    return n != document.getElementById("price-range");
+  });
+  for (let input of inputs) {
+    input.addEventListener("click", (event) => {
+      for (let i = 0; i < productsDOM.children.length; i++) {
+        //check if classlist of productDOM contains
+        if (event.target.type === "radio") {
+          priceRange.value = priceRange.max;
+          priceRangeLabel.innerText = "$" + priceRange.value;
+          if (filtersArr.some((e) => /price-\d+/gm.test(e))) {
+            filtersArr.splice(
+              filtersArr.indexOf(
+                filtersArr.find((value) => /price-\d+/gm.test(value))
+              ),
+              1
+            );
+          }
+          filtersArr.push("price-" + priceRange.value);
+        }
+
+        let childPrice = +String(
+          String(
+            [...productsDOM.children[i].classList].filter((n) =>
+              n.match(/price-/gm)
+            )
+          ).match(/\d+/gm)
+        );
+        let priceFilterArr = +String(
+          filtersArr.filter((price) => price.match(/price-/gm))
+        ).match(/\d+/gm);
+        console.log(priceFilterArr);
+
+        if (
+          (singleTypeVal === "all-of-types" && childPrice <= priceFilterArr) ||
+          (filtersArr.includes("all-of-types") && childPrice <= priceFilterArr)
+        ) {
+          productsDOM.children[i].classList.add("show");
+          productsDOM.children[i].classList.remove("hide");
+        } else if (
+          [...productsDOM.children[i].classList].includes(singleTypeVal) &&
+          childPrice <= priceFilterArr
+        ) {
+          productsDOM.children[i].classList.add("show");
+          productsDOM.children[i].classList.remove("hide");
+        } else {
+          productsDOM.children[i].classList.add("hide");
+          productsDOM.children[i].classList.remove("show");
+        }
+      }
+
+      for (
+        let j = 0;
+        j < [...document.getElementsByClassName("show")].length;
+        j++
+      ) {
+        if (
+          ![
+            ...[...document.getElementsByClassName("show")][j].classList,
+          ].some((r) =>
+            filtersArr.filter((el) => el.match(/color-/gm)).includes(r)
+          )
+        ) {
+          [...document.getElementsByClassName("show")][j].classList.add("hide");
+        }
+      }
+    });
+  }
+}, 500);

@@ -59,31 +59,31 @@
       <!-- start of radio filters -->
       <div class="radio-filters">
         <div class="form_radio_btn">
-          <input
-            id="smartphone"
-            type="radio"
-            name="type"
-            value="smartphone"
-            
-          />
+          <input id="smartphone" type="radio" name="type" value="type-smartphone" />
           <label for="smartphone">Smartphone</label>
         </div>
 
         <div class="form_radio_btn">
-          <input id="notebook" type="radio" name="type" value="notebook" />
+          <input id="notebook" type="radio" name="type" value="type-notebook" />
           <label for="notebook">Notebook</label>
         </div>
 
         <div class="form_radio_btn">
-          <input id="tablet" type="radio" name="type" value="tablet" />
+          <input id="tablet" type="radio" name="type" value="type-tablet" />
           <label for="tablet">Tablet</label>
         </div>
         <div class="form_radio_btn">
-          <input id="watch" type="radio" name="type" value="watch" />
+          <input id="watch" type="radio" name="type" value="type-watch" />
           <label for="watch">Watch</label>
         </div>
         <div class="form_radio_btn">
-          <input id="all-of-types" type="radio" name="type" value="all-of-types" checked/>
+          <input
+            id="all-of-types"
+            type="radio"
+            name="type"
+            value="all-of-types"
+            checked
+          />
           <label for="all-of-types">All</label>
         </div>
       </div>
@@ -114,16 +114,17 @@
             <p><b>Price</b></p>
             <div class="price">
               <input
-                class="price-range"
+                id="price-range"
                 type="range"
-                value="100"
+                value="1849"
                 min="0"
                 max="500"
-                step="100"
+                
               />
-              <p class="price-count">$0</p>
+              <p id="price-count"></p>
             </div>
           </div>
+        
         </div>
         <!-- end of filters menu -->
         <!-- products center -->
@@ -179,6 +180,5 @@
     <script type="text/javascript" src="js/products_slider.js"></script>
     <script type="text/javascript" src="js/filters.js"></script>
     <!-- <script type="text/javascript" src="js/pagination.js"></script> -->
-    
   </body>
 </html>
