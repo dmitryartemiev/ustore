@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ui.cartLogic();
       productPreview();
       makeFilters();
-      // makePages();
+   
     })
    
     
