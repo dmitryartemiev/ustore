@@ -397,5 +397,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(() => {
       ui.getBagButtons();
       ui.cartLogic();
-    });
+      productPreview();
+      makeFilters();
+      // makePages();
+    })
+   
+    
 });
+
