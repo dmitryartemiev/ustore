@@ -258,7 +258,7 @@
           }
         }
         let paginationContent = document.getElementsByClassName('show','show hide')
-        makePages(paginationContent)
+        // makePages(paginationContent)
       });
     }
   };

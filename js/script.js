@@ -21,7 +21,7 @@ let startCount = [];
 class Products {
   async getProducts() {
     try {
-      let result = await fetch("js/products.json");
+      let result = await fetch("/js/products.json");
       let data = await result.json();
       let products = data.items;
       products = products.map((item) => {
