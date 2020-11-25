@@ -73,6 +73,7 @@ h1 {
   left: 0;
   right: 0;
 }
+
 nav {
   width: 100%;
   display: flex;
@@ -158,8 +159,8 @@ form.example::after {
 /* ---Slider--- */
 
 .slider__container {
-  height: auto;
-  width: 100%;
+  height: 40vh;
+  max-width: 1170px;
   padding: 0;
   overflow: hidden;
   position: relative;
@@ -178,6 +179,7 @@ form.example::after {
 }
 /* Slider button */
 .slider__content img {
+  object-fit: cover;
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -225,11 +227,15 @@ form.example::after {
 /* ---End of slider--- */
 
 /* Start of banner */
-
+.catalog-sect:nth-child(2n+1){
+  background-color: rgb(0, 182, 164);
+  color: white;
+  
+}
 .banner {
   display: block;
-  max-width: 1170px;
-  margin: 0 auto;
+  
+
   position: relative;
   background-color: transparent;
   border: none;
@@ -263,6 +269,18 @@ form.example::after {
 .banner-text {
   text-decoration: none;
   color: white;
+}
+
+.welcome-container{
+  display: flex;
+  
+}
+.thanks-container{
+  flex-direction: row-reverse;
+  display: flex;
+}
+.welcome{
+  font-size: 1rem;
 }
 /* End of banner */
 
@@ -649,38 +667,59 @@ ul.breadcrumb li a:hover {
 /* ---End of pagination--- */
 
 /* ---Start of footer-- */
+footer{
+  background-color: black;
+  
+
+}
 .footer-container {
   max-width: 1170px;
   margin: 0 auto;
-  color: white;
+  color: rgb(209, 209, 209);
   background-color: black;
-  padding: 10px;
+ 
   font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
-  flex-shrink: 2;
+  /* flex-shrink: 1; */
   justify-content: space-between;
   align-content: space-between;
 }
 .footer-container p {
-  border: 1px solid white;
-  padding: 5px;
+ 
+
   transition: all 0.2s ease;
   cursor: pointer;
-  margin: 10px 20px;
+  margin: 5px 20px;
   text-align: center;
+  padding: 0px 5px;
 }
 .footer-container p:hover {
-  background-color: rgb(0, 182, 164);
+ 
   transform: scale(1.1);
 }
 .logo {
   text-transform: uppercase;
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 2rem;
+  
 }
 .contacts p a {
-  color: white;
+  color: rgb(209, 209, 209);
+
+}
+.copyright{
+ width: 100%;
+ text-align: center;
+ margin: 10px 0px;
+}
+
+.contacts, .logo-div, .terms{
+  width: 33%;
+}
+.fa-phone{
+  
+  padding: 10px 0px;
 }
 /* End of footer */
 
