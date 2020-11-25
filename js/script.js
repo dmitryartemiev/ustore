@@ -382,7 +382,9 @@ class Storage {
   }
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
+  
   const ui = new UI();
   const products = new Products();
   //setup app
@@ -399,7 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ui.cartLogic();
       productPreview();
       makeFilters();
-   
+      makePages(document.getElementsByClassName('show'));
     })
    
     

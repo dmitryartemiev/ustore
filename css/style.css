@@ -21,6 +21,12 @@ body {
 }.hide{
   display: none;
 }
+.show-pagin{
+  display: block;
+}
+.hide-pagin{
+  display: none;
+}
 
 h1,
 h2,

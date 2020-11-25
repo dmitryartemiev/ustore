@@ -178,6 +178,7 @@
             [...productsDOM.children][k].classList.add("hide");
           }
         }
+        makePages(document.getElementsByClassName('show'));
       },
       false
     );
@@ -238,28 +239,40 @@
           }
         }
 
+
         for (
-          let j = 0;
-          j < [...document.getElementsByClassName("show")].length;
-          j++
-        ) {
-          if (
-            ![
-              ...[...document.getElementsByClassName("show")][j].classList,
-            ].some((r) =>
-              filtersArr.filter((el) => el.match(/color-/gm)).includes(r)
-            )
-          ) {
-            
-            [...document.getElementsByClassName("show")][j].classList.add(
-              "hide"
-            );
-        
+          let j = 0; j < [...document.getElementsByClassName("show")].length; j++) {
+          if (![ ...[...document.getElementsByClassName("show")][j].classList,].some((r) =>
+              filtersArr.filter((el) => el.match(/color-/gm)).includes(r))) {
+            [...document.querySelectorAll(".show")][j].classList.add("hide");
+           console.log([...document.querySelectorAll(".show")][j].className);
           }
         }
-        let paginationContent = document.getElementsByClassName('show','show hide')
-        // makePages(paginationContent)
+
+
+        for (let fix of document.getElementsByClassName('hide')){
+          if ([...fix.classList].includes('show')){
+            fix.classList.remove('show')
+          }
+        }
+
+
+        for (let fix of document.getElementsByClassName('show')){
+          if ([...fix.classList].includes('hide')){
+            fix.classList.remove('hide')
+          }
+        }
+
+
+
+
+        for (let clr1 of [...productsDOM.children]){
+          clr1.classList.remove('hide-pagin')
+          clr1.classList.remove('show-pagin')
+      }
+        makePages(document.getElementsByClassName('show'));
       });
+        
     }
   };
 
