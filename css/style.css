@@ -244,6 +244,7 @@ form.example::after {
   transition: 0.2s ease all;
   border: 2px solid white;
   outline: none;
+  padding: 40px;
 }
 
 .banner:hover {
@@ -329,10 +330,11 @@ form.example::after {
   margin-left: 5px;
   font-weight: 700;
   font-size: 1rem;
+   background-color: red;
 }
 .subscribe-button:hover {
   transform: scale(1.1);
-  background-color: red;
+ 
 }
 .input-area {
   margin-bottom: 15px;
