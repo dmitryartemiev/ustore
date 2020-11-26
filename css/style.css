@@ -960,4 +960,9 @@ footer {
   .form_radio_btn{
     margin-top: 10px;
   }
+  #price-count{
+    text-align: center;
+    color: rgb(0, 182, 164);
+    font-weight: 700;
+  }
 }
