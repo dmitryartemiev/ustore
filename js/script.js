@@ -405,11 +405,14 @@ document.addEventListener("DOMContentLoaded", () => {
   //setup app
   ui.setupAPP();
   //get all products
+
   products
     .getProducts()
     .then((products) => {
-      ui.displayProducts(products);
       Storage.saveProducts(products);
+      Storage.saveCart(cart);
+      ui.displayProducts(products);
+      
     })
     .then(() => {
       ui.getBagButtons();
