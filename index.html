@@ -22,17 +22,18 @@
     <!-- nav start -->
     <div class="nav__container">
       <nav>
+        <div class="menu-btn">
         <span class="nav-icon">
           <i class="fas fa-bars"></i>
         </span>
-        <a href="tel:+380953782072">+38(095)-378-20-72</a>
-        <h1> <a href="index.html">Silicon store</a> </h1>
-        <!-- start of search bar -->
-        <form class="example" action="action_page.php">
-          <input type="text" placeholder="Search.." name="search" />
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-        <!-- end of search bar -->
+        </div>
+        <a
+          class="fas fa-phone"
+          style="font-size: 2rem;"
+          href="tel:+380953782072"
+        ></a>
+        <h1><a class="logo-main" href="/index.html"> Silicon store</a></h1>
+        
         <div class="cart-btn">
           <span class="nav-icon">
             <i class="fas fa-cart-plus"></i>
@@ -66,44 +67,59 @@
       <button class="next" onclick="nextSlide()"></button>
     </div>
     <!-- end of slider  -->
-      <!-- Start of 1st sect -->
+    <!-- Start of 1st sect -->
     <section class="catalog-sect">
       <div class="container">
-      <div class="section-model">
-        <h2>Hey!</h2>
-      </div>
-      <div class="welcome-container">
-        <div class="welcome">
-          Welcome to our store! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita repudiandae possimus iusto, voluptates dolores, eaque pariatur officiis beatae odio qui eum vitae ipsam incidunt culpa quibusdam molestias nesciunt. Ipsam, sint.
+        <div class="section-model">
+          <h2>Hey!</h2>
         </div>
-      <form action="catalog.html">
-        <button class="banner">
-          <img src="/assets/images/banner/banner.jpg" alt="Shop now" />
-          <a class="banner-text" href="catalog.html">shop now!</a>
-        </button>
-      </form>
-     </div></div>
+        <div class="welcome-container">
+          <div class="welcome">
+            Welcome to our store! Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Expedita repudiandae possimus iusto, voluptates
+            dolores, eaque pariatur officiis beatae odio qui eum vitae ipsam
+            incidunt culpa quibusdam molestias nesciunt. Ipsam, sint.
+          </div>
+          <form action="catalog.html">
+            <button class="banner">
+              <!-- <img src="/assets/images/banner/banner.jpg" alt="Shop now" /> -->
+              <a class="banner-text" href="catalog.html">shop now!</a>
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
- <!--End of 1st sect -->
+    <!--End of 1st sect -->
     <!-- Start of 2nd sect -->
     <section class="catalog-sect">
       <div class="container">
-      <div class="section-model">
-        <h2>Thanks for visiting!</h2>
-      </div>
-      <div class="thanks-container">
-        <div class="welcome">
-          Welcome to our store! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita repudiandae possimus iusto, voluptates dolores, eaque pariatur officiis beatae odio qui eum vitae ipsam incidunt culpa quibusdam molestias nesciunt. Ipsam, sint.
+        <div class="section-model">
+          <h2>Thanks for visiting!</h2>
         </div>
-      <form action="catalog.html">
-        <button class="banner">
-          <img src="/assets/images/banner/banner.jpg" alt="Shop now" />
-          <a class="banner-text" href="catalog.html">shop now!</a>
-        </button>
-      </form>
-     </div></div>
+        <div id='subscribe-id' class="thanks-container">
+          <div class="subscribe">Subscribe to our Newsletter</div>
+          <div class="line"></div>
+          <div class="subscribe-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+              cumque aperiam quia. Ea nulla, perferendis molestiae repellendus
+              nobis corrupti veniam reprehenderit, repellat sint quis officiis
+              aliquid illo iusto rerum! Facere.
+            </p>
+          </div>
+          <div class="input-area">
+            <input
+              type="text"
+              size="40"
+              class="subscribe-input"
+              placeholder="Enter your email"
+            />
+            <button class="subscribe-button">subscribe</button>
+          </div>
+        </div>
+      </div>
     </section>
- <!--End of 2nd sect -->
+    <!--End of 2nd sect -->
 
     <!-- start of cart -->
     <div class="cart-overlay">
@@ -123,11 +139,44 @@
       </div>
     </div>
     <!-- end of cart -->
+    <!-- start of menu -->
+    <div class="menu-overlay">
+      <div class="menu">
+        <span class="close-menu">
+          <i class="fas fa-window-close"></i>
+        </span>
+        <h2>MENU</h2>
+        <div class="menu-container">
+<form class="example" action="#">
+        <input type="text" placeholder="Search.." name="search" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+
+        <a href="/index.html">Home</a>
+        <a href="/catalog.html">Catalog</a>
+        <a href="#subscribe-id">Subscribe</a>
+        <a href="#footer">Contacts</a>
+        <a href="#">Terms of Policy</a>
+        <a href="#">Terms of service</a>
+        <a href="#">Terms and conditions</a>
+        <!-- start of search bar -->
+        
+        <!-- end of search bar -->
+        </div>
+      </div>
+    </div>
+    <!-- end of menu-->
     <!-- start of footer -->
-    <footer>
+    <footer id='footer'>
       <div class="footer-container">
         <div class="contacts">
-          <p><a href="tel:+380953782072">+38(095)-378-20-72</a></p>
+          <p>
+            <a
+              class="fas fa-phone"
+              style="font-size: 2rem;"
+              href="tel:+380953782072"
+            ></a>
+          </p>
           <p>Kyiv, Ukraine</p>
         </div>
         <div class="logo-div">
@@ -138,12 +187,11 @@
           <p>Terms of Service</p>
           <p>Terms and conditions</p>
         </div>
+        <div class="copyright">Silicon Store 2020 © All Right reserved</div>
       </div>
     </footer>
     <!-- end of footer -->
     <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    
-
   </body>
 </html>
